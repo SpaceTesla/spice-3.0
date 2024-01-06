@@ -1,0 +1,81 @@
+@font-face {
+  font-family: cafe;
+  src: url("../fonts/Cafe\ Francoise_D.otf");
+}
+
+body {
+  background-image: url("../images/home/bg_img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.navbar {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  font-size: x-large;
+  color: white;
+  font-family: cafe;
+}
+
+#intro {
+  font-size: large;
+  font-family: Helvetica, sans-serif;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 45vh;
+  margin-left: 3em;
+}
+
+h1 {
+  margin-top: 0;
+  text-align: left;
+  font-family: cafe;
+}
+
+/* last button */
+
+.bn47 {
+  position: relative;
+  padding: 1rem 2rem 0.5rem 2.5rem;
+  color: #000000;
+  border: 3px solid #776e62;
+  -webkit-transition: padding 0.3s ease-in-out;
+  transition: padding 0.3s ease-in-out;
+  text-decoration: none;
+  text-align: center;
+  width: 35vh;
+}
+
+.bn47:before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.bn47:hover {
+  padding: 0.75rem 2.25rem;
+}
+
+.bn47:hover:before {
+  top: 0;
+  left: 0;
+}
