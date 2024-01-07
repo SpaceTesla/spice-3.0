@@ -1,6 +1,37 @@
+:root {
+  --hunyadi-yellow: #d7a345ff;
+  --timberwolf: #e4dfdaff;
+  --black-olive: #3b3e3bff;
+  --dark-moss-green: #4c552dff;
+  --seal-brown: #562413ff;
+  --jet: #373737ff;
+  --coffee: #795e4dff;
+  --rust: #b85326ff;
+  --davys-gray: #635e5cff;
+  --jet-2: #26292bff;
+}
+
 @font-face {
   font-family: cafe;
   src: url("../fonts/Cafe\ Francoise_D.otf");
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 body {
@@ -31,9 +62,53 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: 92vh;
   width: 45vh;
   margin-left: 3em;
+  animation: 0.8s ease-out 0s 1 slideInFromLeft;
+  font-family: "Courgette", cursive;
+}
+@media screen and (max-width: 1200px) {
+  #intro {
+    margin-left: 2.5em;
+    width: 45vh;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #intro {
+    margin-left: 2em;
+    width: 45vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #intro {
+    margin-left: 1.5em;
+    width: 45vh;
+  }
+  #footer {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #intro {
+    margin-left: 1em;
+    width: 45vh;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #intro {
+    margin-left: 0.5em;
+    width: 25vh;
+  }
+}
+
+#intro p {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 h1 {
@@ -42,40 +117,107 @@ h1 {
   font-family: cafe;
 }
 
+#footer {
+  background-color: var(--jet-2);
+  color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer a {
+  color: whitesmoke;
+}
+
+#logo {
+  height: 100px;
+}
+
 /* last button */
 
-.bn47 {
+.bn5 {
+  padding: 0.3rem;
+  border: none;
+  outline: none;
+  color: var(--jet-2);
+  background: var(--black-olive);
+  background: transparent;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
   position: relative;
-  padding: 1rem 2rem 0.5rem 2.5rem;
-  color: #000000;
-  border: 3px solid #776e62;
-  -webkit-transition: padding 0.3s ease-in-out;
-  transition: padding 0.3s ease-in-out;
-  text-decoration: none;
+  z-index: 0;
+  border-radius: 10px;
+  width: 12em;
+  font-family: "play";
+  font-size: x-large;
   text-align: center;
-  width: 35vh;
 }
 
-.bn47:before {
+.bn5:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingbn5 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.bn5:active {
+  color: whitesmoke;
+  /* background: transparent;
+  backdrop-filter: blur(10px); */
+}
+
+.bn5:active:after {
+  background: transparent;
+}
+
+.bn5:hover:before {
+  opacity: 1;
+}
+
+.bn5:after {
+  z-index: -1;
   content: "";
   position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  z-index: -1;
-  height: 100%;
   width: 100%;
-  background-color: #ffffff;
-  border-right: 3px solid #ffffff;
-  border-bottom: 3px solid #ffffff;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.bn47:hover {
-  padding: 0.75rem 2.25rem;
-}
-
-.bn47:hover:before {
-  top: 0;
+  height: 100%;
+  background: whitesmoke;
+  /* background: transparent;
+  backdrop-filter: blur(10px); */
   left: 0;
+  top: 0;
+  border-radius: 10px;
 }
