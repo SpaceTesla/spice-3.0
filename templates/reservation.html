@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Reservation Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../static/css/reservation.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/reservation.css') }}"
+    />
   </head>
 
   <body>
@@ -18,19 +25,28 @@
 
         <div class="card-content">
           <h3>Reservation</h3>
-          <form>
+          <form method="POST" action="{{ url_for('reservation') }}">
             <div class="form-row">
-              <input type="date" placeholder="Date" />
-              <input type="time" placeholder="Time" />
+              <input type="date" placeholder="Date" name="date" />
+              <input type="time" placeholder="Time" name="time" />
             </div>
 
             <div class="form-row">
-              <input type="text" placeholder="Full Name" />
-              <input type="text" placeholder="Phone Number" />
+              <input type="text" placeholder="Full Name" name="full_name" />
+              <input
+                type="text"
+                placeholder="Phone Number"
+                name="phone_number"
+              />
             </div>
 
             <div class="form-row">
-              <input type="number" placeholder="Number of People" min="1" />
+              <input
+                type="number"
+                placeholder="Number of People"
+                min="1"
+                name="num_people"
+              />
 
               <select name="tableType">
                 <option value="familyDiningTables">Family Dining Tables</option>
