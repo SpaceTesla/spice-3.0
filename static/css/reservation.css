@@ -13,7 +13,7 @@ body {
 .banner {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("banner-img.jpg") center/cover no-repeat;
+    url("../images/reservation/banner-img.jpg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +28,7 @@ body {
 }
 
 .card-img {
-  background: url("card-img.jpg") center/cover no-repeat;
+  background: url("../images/reservation/card-img.jpg") center/cover no-repeat;
 }
 
 .banner h2 {
