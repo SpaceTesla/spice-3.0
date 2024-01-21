@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Lobster", cursive;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  overflow: scroll;
+  background: url("../images/about/back.jpg") center/cover no-repeat;
+}
+.row {
+  width: 100%;
+  padding: 50px 100px;
+}
+.image-section {
+  width: 30%;
+  float: left;
+}
+.image-section img {
+  width: 100%;
+  height: auto;
+}
+.content {
+  width: 60%;
+  float: left;
+  margin-left: 50px;
+}
+.content h1 {
+  font-size: 90px;
+  letter-spacing: 3.5px;
+  margin-top: 25px;
+  color: #222;
+}
+.content h2 {
+  font-size: 40px;
+  font-family: sans-serif;
+  color: #b60112;
+  margin-top: 25px;
+}
+.content h3 {
+  font-size: 30px;
+  font-family: sans-serif;
+}
+.content p {
+  font-size: 20px;
+  font-family: serif;
+  margin-top: 10px;
+  line-height: 1.2;
+}
+@media screen and (max-width: 768px) {
+  .image-section {
+    width: 100%;
+    float: none;
+  }
+  .content {
+    width: 100%;
+    float: none;
+    margin-left: 0px;
+  }
+  .content h1 {
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+  }
+  .content h2 {
+    font-size: 30px;
+  }
+  .content p {
+    font-size: 18px;
+  }
+}
