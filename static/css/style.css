@@ -10,7 +10,7 @@
   width:100%;
   min-height: 100vh;
   overflow: scroll;
-  background:  url("back.jpg") center/contain no-repeat; 
+  background:  url("back.jpg") center/cover no-repeat; 
 }
 .row{
   width: 100%;
