@@ -3,9 +3,176 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu</title>
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="../static/css/menu.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
   </head>
-  <body>
-    <h1>Menu</h1>
+  <body style="background-image: url('../static/images/home/bg_img.jpg');">
+    <nav class="navbar navbar-expand-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Spice 3.0</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./reservation.html">Reservation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="menu">
+      <h1>
+        OUR MENU
+      </h1>
+    </div>
+    <div style="padding: 20px;">
+      <section class="slider-container">
+        <div class="slider-images">
+          <div class="slider-img">
+            <img src="../static/images/others/Orange and Black Bold Geometric Restaurant Menu (2).png" alt="1" />
+            <h1 style="color: white;">APPETIZERS</h1>
+            <div class="details">
+              <h2 >APPETIZERS</h2>
+              
+            </div>
+          </div>
+          <div class="slider-img">
+            <img src="../static/images/others/Orange and Black Bold Geometric Restaurant Menu (4).png" alt="2" />
+            <h1 style="color: white;">Signature Soups</h1>
+            <div class="details">
+              <h2>Signature Soups</h2>
+              
+            </div>
+          </div>
+          <div class="slider-img">
+            <img src="../static/images/others/Orange and Black Bold Geometric Restaurant Menu (5).png" alt="3" />
+            <h1 style="color: white;"> Main Courses</h1>
+            <div class="details">
+              <h2> Main Courses</h2>
+              
+            </div>
+          </div>
+          <div class="slider-img active">
+            <img src="../static/images/others/Orange and Black Bold Geometric Restaurant Menu (6).png" alt="4" />
+            <h1 style="color: white;"> Desserts</h1>
+            <div class="details">
+              <h2> Desserts</h2>
+              
+            </div>
+          </div>
+          <div class="slider-img">
+            <img src="../static/images/others/Orange and Black Bold Geometric Restaurant Menu (7).png" alt="5" />
+            <h1 style="color: white;"> Beverages</h1>
+            <div class="details">
+              <h2> Beverages</h2>
+           
+            </div>
+          </div>
+          <div class="slider-img">
+            <img src="../static/images/others/Orange and Black Bold Geometric Restaurant Menu (5).png" alt="6" />
+            <h1 style="color: white;"> Special</h1>
+            <div class="details">
+              <h2> Special</h2>
+              
+            </div>
+          </div>
+          <div class="slider-img">
+            <img src="../static/images/others/Orange and Black Bold Geometric Restaurant Menu (2).png" alt="7" />
+            <h1 style="color: white;"> Dishes</h1>
+            <div class="details">
+              <h2> Dishes</h2>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="../static/js/jQuery.js"></script>
+      <script>
+        jQuery(document).ready(function ($) {
+          $(".slider-img").on("click", function () {
+            $(".slider-img").removeClass("active");
+            $(this).addClass("active");
+          });
+        });
+      </script>
+    </div>
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <footer class="footer animate-on-scroll" id="footer">
+          <div class="container py-4">
+            <div class="row">
+              <div class="col-md-4 d-flex align-items-center">
+                <!-- Logo -->
+                <img
+                  src="../static/images/others/logo.png"
+                  alt="Logo"
+                  class="img-fluid mb-3 me-3"
+                  id="logo"
+                />
+                <!-- Small Description -->
+                <div>
+                  <p>
+                    Discover an array of flavors at Spice 3.0, where tradition meets
+                    innovation in every dish.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-md-6 d-flex flex-column">
+                    <div class="mx-auto">
+                      <h5>Contact Us</h5>
+                      <!-- Contact information -->
+                      <p>
+                        Email:
+                        <a href="mailto:contact@spice3.com">contact@spice3.com</a>
+                      </p>
+                      <p>Phone: <a href="tel:+123456789">+123456789</a></p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <h5>Follow Us</h5>
+                    <!-- Social media links -->
+                    <a href="#" class="text-light me-3">
+                      <i class="bi bi-facebook"></i> Facebook
+                    </a>
+                    <a href="#" class="text-light me-3">
+                      <i class="bi bi-instagram"></i> Instagram
+                    </a>
+                    <a href="#" class="text-light me-3">
+                      <i class="bi bi-twitter"></i> Twitter
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
   </body>
 </html>
+
